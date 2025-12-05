@@ -80,9 +80,22 @@ function getUserChoice() {
     return userChoice;
 }
 
+// Function that will be used to simulate the game. 
+function playGame() {
+    let userChoice;
+    let computerChoice;
+    for (let i = 0; i < 5; i++) {
+        userChoice = getUserChoice();
+        computerChoice = getComputerChoice();
+        playRound(userChoice, computerChoice);
+        console.log(`Round ${i+1}`)
+        console.log(`User score: ${humanScore}`);
+        console.log(`Computer score: ${computerScore}`);
+    }
+}
+
 // Declare the variables that will be used to keep track of the score.
 let computerScore = 0;
 let humanScore = 0;
 
-
-
+playGame();
