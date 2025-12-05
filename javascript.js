@@ -27,6 +27,9 @@ function getComputerChoice() {
 
 // Function that will be used to play a single round of rock, paper, scissors.
 function playRound(humanChoice, computerChoice) {
+    // Make the human choice case insensitive.
+    humanChoice = humanChoice.toLowerCase();
+
     // Check if the human and computer choices are the same.
     if (humanChoice === computerChoice) {
         console.log("Tie. Nobody wins.")
